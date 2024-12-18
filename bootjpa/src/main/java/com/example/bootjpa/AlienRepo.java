@@ -1,10 +1,9 @@
 package com.example.bootjpa;
 
 import com.example.bootjpa.model.Alien;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
-public interface AlienRepo extends CrudRepository<Alien, Integer> {
-    List<Alien> findByLang(String lang);
+@Repository
+public interface AlienRepo extends JpaRepository<Alien, Integer> {
 }
